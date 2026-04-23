@@ -1,0 +1,116 @@
+#divleft_buttons   {
+    display:inline;             /* da se lahko elementi v notranjosti lepo razporedijo */     
+    margin-right: 5px;           /* malo prostora med gumbi */
+}
+#divright_buttons{
+    display:inline;             /* da se lahko elementi v notranjosti lepo razporedijo */
+    margin-right: 5px;                   /* malo prostora med gumbi */
+}
+#divcc_buttons{
+    display:inline;             /* da se lahko elementi v notranjosti lepo razporedijo */
+    margin-right: 5px;                   /* malo prostora med gumbi */
+}
+
+#divtop_buttons,#divbottom_buttons{
+    display:flex;             /* da se lahko elementi v notranjosti lepo razporedijo */
+    gap: 5px;                  /* malo prostora med gumbi */ 
+}
+
+
+
+#divall {
+    display: flex;             /* elementi v vrstici */                /* prostor med elementi */
+    width: 100%;
+    flex-wrap: wrap;           /* elementi se lahko zavijejo, če ne gredo v eno vrstico */
+}
+
+/* Sredinski div */
+#div_center {
+    width: 2000px;             /* fiksna širina */
+    display: flex;             /* če imaš notri več elementov, jih lahko razporediš z flex */
+}
+
+body{
+    background-color: rgb(180, 127, 199) ;
+}
+
+#btn1{
+    width: 70px;
+    height: 70px;
+    background-color:#ff4d4d;
+    color:white;
+    font-family: "Courier New", "Lucida Console", "Monaco", "Consolas", "Andale Mono", monospace;
+    border-radius:6px;
+    border:2px solid #990000;
+
+}
+#btn2{
+    width: 70px;
+    height: 70px;
+    background-color:#4da6ff;
+    color:black;
+    font-family: "Times New Roman", "Georgia", "Palatino Linotype", "Book Antiqua", "Garamond", serif;  
+    font-style:italic;
+    border-radius:20px;
+    border:none;
+}
+
+#why_are_you_so_lazy_give_up{
+    animation-name: "Not here.";
+    width: 70px;
+    height: 70px;
+    background-color:#8a2be2;
+    color:yellow;
+    font-family: Verdana, "Lucida Sans", "Trebuchet MS", "Tahoma", "Geneva", "FLAG{hidden_among_fonts_btn3}", sans-serif;
+    border-radius:30px;
+    border:3px solid black;
+    text-transform:uppercase;
+
+}
+
+#btn3{
+    width: 70px;
+    height: 70px;
+    background-color:#33cc66;
+    color:white;
+    font-family: Impact, "Arial Black", "Franklin Gothic Medium", fantasy;
+    font-weight:bold;
+    border-radius:4px;
+    border:3px dashed #006622;
+
+}
+
+#why_are_you_so_lazy{
+    animation-name: "You see this  alredy and are still looking at it?";
+    width: 70px;
+    height: 70px;
+    background-color:#8a2be2;
+    color:yellow;
+    font-family: Impact, "Open Sans",  "Segoe UI",  sans-serif, fantasy;
+    border-radius:30px;
+    border:3px solid black;
+    text-transform:uppercase;
+
+}
+
+#btn4{
+    width: 70px;
+    height: 70px;
+    background-color:#8a2be2;
+    color:yellow;
+    font-family: Impact, "Open Sans", "Arial Narrow", "Lucida Grande", fantasy; 
+    border-radius:30px;
+    border:3px solid black;
+    text-transform:uppercase;
+
+}
+
+
+#header_s {
+    font-family: Impact, "cixd{efaabk_fk_mixfk_pfdeq}", sans-serif; 
+    text-align: center;
+}
+#small{
+   color: white;
+   font-size: 5px;
+}

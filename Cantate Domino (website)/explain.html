@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Naslov strani -->
+<title name="Top">Cantate Domino</title>
+
+<!-- Kodiranje znakov -->
+<meta charset="UTF-8">
+
+<!-- Avtor -->
+<meta name="Author" content="Leila Movrin Maršanič">
+
+<style>
+
+/* ===============================
+   OSNOVNI STIL STRANI
+================================ */
+
+body{
+background-color:#E5BEA0;
+font-family:Arial;
+margin:0;
+padding:0;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+#myHeader{
+display:flex;
+background-color:#996350;
+border:#743930 5px solid;
+border-radius:10px;
+align-items:center;
+}
+
+#slikaheader{
+padding:10px;
+}
+
+#He{
+text-align:center;
+margin-left:10px;
+}
+
+/* ===============================
+   NAVIGACIJA
+================================ */
+
+nav{
+background-color:#996350;
+border:#743930 5px solid;
+border-radius:10px;
+padding:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-right:15px;
+font-weight:bold;
+}
+
+/* ===============================
+   GUMB ZA ODPIRANJE MODALA
+================================ */
+
+#openBtn{
+border:#9f7e6c 6px solid;
+border-radius:30px;
+background-color:#bf9282;
+margin:10px;
+padding:10px;
+cursor:pointer;
+}
+
+/* repeat for other
+#MATEJAopenBtn
+#PETRAopenBtn
+#DANICAopenBtn
+#JERCAopenBtn
+#SONJAopenBtn
+#MIRANopenBtn
+#ANTONopenBtn
+#FRANCopenBtn
+#SAŠOopenBtn
+#ALEŠopenBtn
+#GORANopenBtn
+*/
+
+/* ===============================
+   MODAL OKNO
+================================ */
+
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background-color:rgba(0,0,0,0.5);
+}
+
+.modal-content{
+background-color:#c9a497;
+border:6px solid #9f7e6c;
+width:300px;
+margin:15% auto;
+padding:20px;
+position:relative;
+border-radius:8px;
+text-align:center;
+}
+
+/* repeat for other modal-content */
+
+.close{
+position:absolute;
+right:10px;
+top:5px;
+font-size:22px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- =================================
+HEADER
+================================= -->
+
+<div id="myHeader">
+
+<div id="slikaheader">
+<img src="CDL.png" width="75" height="70">
+</div>
+
+<div id="He">
+<h2>Cantate Domino</h2>
+<p>(Vokalna skupina iz Kočevja)</p>
+</div>
+
+</div>
+
+
+<!-- =================================
+NAVIGACIJA
+================================= -->
+
+<nav>
+
+<a href="#ZASEDBA">ZASEDBA</a>
+<a href="#KRAJI">KRAJI DELOVANJA</a>
+
+</nav>
+
+
+<!-- =================================
+GUMB ZA MODAL
+================================= -->
+
+<button id="openBtn">HELENA ŠTEFANIČ</button>
+
+
+<!-- =================================
+MODAL OKNO
+================================= -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<img src="HELENA_ŠTEFANIČ.Sopran.jpg" width="200">
+
+<p>HELENA ŠTEFANIČ – Sopran</p>
+
+</div>
+
+</div>
+
+<!-- repeat for other singers -->
+
+
+<!-- =================================
+OBRAZEC ZA NASTOP
+================================= -->
+
+<h3>POŠLJI PROŠNJO ZA NASTOP</h3>
+
+<form action="Projekt.php">
+
+<label>Ime</label><br>
+<input type="text"><br><br>
+
+<label>Email</label><br>
+<input type="email"><br><br>
+
+<label>Kraj</label><br>
+<input type="text"><br><br>
+
+<label>Telefon</label><br>
+<input type="tel"><br><br>
+
+<input type="submit" value="Pošlji">
+
+</form>
+
+
+<!-- =================================
+JAVASCRIPT
+================================= -->
+
+<script>
+
+/* počakamo da se stran naloži */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+/* =================================
+PRIMER ZA EN MODAL
+================================= */
+
+const modal = document.getElementById("modal");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.querySelector(".close");
+
+/* odpre modal */
+
+openBtn.addEventListener("click", function(){
+modal.style.display="block";
+});
+
+/* zapre modal */
+
+closeBtn.addEventListener("click", function(){
+modal.style.display="none";
+});
+
+/* zapre modal če kliknemo izven */
+
+window.addEventListener("click", function(event){
+
+if(event.target===modal){
+modal.style.display="none";
+}
+
+});
+
+/* repeat for other modals */
+
+});
+
+</script>
+
+
+</body>
+</html>

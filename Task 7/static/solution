@@ -1,0 +1,7 @@
+First, go to the given website and look at the rows of buttons or links on the page. In the row just above the bottom one, 
+locate the button that allows you to download a file named ciper.txt and download it to your computer. After that, inspect 
+the website’s source code by opening the developer tools in your browser and navigate to the CSS files used by the page. 
+In the CSS, search for a hidden value that appears as a font-family name; this value contains the encrypted flag. Copy this 
+encrypted string. Then open the ciper.txt file you downloaded earlier and find the Python code inside it. 
+Use that Python script to decrypt the encrypted string you found in the CSS. Run the script with the encrypted value as the 
+input, and the output produced by the script will reveal the decrypted flag.

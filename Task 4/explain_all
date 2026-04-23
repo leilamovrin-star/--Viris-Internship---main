@@ -1,0 +1,72 @@
+file_m=input("Input file name:")  # ask the user to enter the file name
+
+tabela=[]  # empty list that will store the CSV table rows
+
+if file_m.endswith(".csv"):  # check if the file name ends with .csv
+    print("To je csv datoteka")  # print that the file is a CSV file
+
+    # open the file in read mode with UTF-8 encoding
+    with open(file_m, "r", encoding="utf-8") as my:
+        for vrstica in my:  # read the file line by line
+            pod= vrstica.strip().split(",")  # remove spaces/newlines and split by comma
+            tabela.append(pod)  # add the row (list of values) to tabela
+
+    st=len(tabela[0])  # number of columns (based on the first row)
+
+    st_šir=[0]*st  # list that will store the width of each column
+
+    # determine the maximum width needed for each column
+    for vrsti in tabela:  # go through every row
+        for i in range(st):  # go through every column
+          if len(vrsti[i]) > st_šir[i]:  # if this value is longer than the stored width
+              st_šir[i]=len(vrsti[i])+2  # update width (+2 for spacing)
+
+    # function that prints the horizontal table border
+    def č():
+        for b in st_šir:  # for each column width
+            print("+", "-"*b, end="")  # print +---- style separator
+        print("+")  # end the border line
+
+    # function that prints one table row
+    def iz_vr(vrsti):
+        for i in range(st):  # for every column
+            print("|" + vrsti[i].center(st_šir[i]), end=" ")  # print value centered in column
+        print("|")  # close the row
+
+    č()  # print top border
+    iz_vr(tabela[0])  # print header row (first row of CSV)
+    č()  # print separator
+
+    for vrsti in tabela[1:]:  # print all remaining rows
+      iz_vr(vrsti)
+
+    č()  # print bottom border
+
+else:
+    print("To ni csv datoteka")  # print message if the file is not CSV
+
+
+
+
+
+
+#Docker code explained
+
+FROM python:3.11     # use the official Python 3.11 Docker image as the base environment
+
+COPY fi.py .         # copy the Python script fi.py from your computer into the container
+
+COPY do.csv .        # copy the CSV file do.csv into the container
+
+CMD ["python", "fi.py"]   # command that runs when the container starts (executes the script)
+
+
+
+
+
+
+
+#do.csv file explained
+Name,age,city      → header row (column names)
+Ana,16,Canada         → row 1 (name, age, city)
+Mari,15,Berlin       → row 2

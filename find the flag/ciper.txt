@@ -1,0 +1,23 @@
+Gaius Julius Caesar[a] (12 or 13 July 100 BC – 15 March 44 BC) was a Roman general and statesman 
+who was the dictator of the Roman Republic almost continuously from 49 BC until his assassination 
+in 44 BC. A member of the First Triumvirate, he led the Roman armies through the Gallic Wars and 
+defeated his political rival Pompey in Caesar’s civil war. He consolidated power and proclaimed 
+himself dictator perpetuo (dictator for life) in 44 BC, which contributed to the political conditions 
+that led to the collapse of the Roman Republic and the emergence of the Roman Empire. For his role in 
+these events, he is regarded as one of the most influential historical figures.
+
+In 60 BC, Caesar, Crassus, and Pompey formed the First Triumvirate, an informal political alliance that 
+dominated Roman politics for several years. Their attempts to amass political power were opposed by many 
+in the Senate, among them Cato the Younger with the private support of Cicero. Caesar rose to become one 
+of the most powerful politicians in the Roman Republic through a string of military victories in the Gallic 
+Wars, completed by 51 BC, which greatly extended Roman territory. During this time, he both invaded Britain and 
+built a bridge across the river Rhine. These achievements and the support of his veteran army threatened to eclipse 
+the standing of Pompey. The alliance between Caesar and Pompey slowly broke down and, by 50 BC, Pompey had realigned 
+himself with the Senate. With his command expiring and the Gallic Wars largely concluded, the Senate ordered Caesar to 
+step down from his military command and return to Rome. In early January 49 BC, Caesar openly defied the Senate by crossing 
+the Rubicon and marching towards Rome at the head of an army. This began Caesar's civil war, which he won, leaving him in a 
+position of near-unchallenged power and influence in 45 BC.
+
+encrypted = ""decrypted = ""key = 3for char in encrypted:if char.isalpha():  # check if it's a letter
+# shift the characterdecrypted += chr((ord(char) - ord('a') + key) % 26 + ord('a'))else:
+decrypted += char  # keep non-letters the sameprint("Decrypted:", decrypted)

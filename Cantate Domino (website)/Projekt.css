@@ -1,0 +1,829 @@
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.MATEJAmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.PETRAmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.DANICAmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.JERICAmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.SONJAmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.MIRANmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.ANTONmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.FRANCmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.SAŠOmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.ALEŠmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+                      
+}
+
+.GORANmodal-content {
+  background-color: #c9a497; 
+  border: 6px solid #9f7e6c;   
+  width: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                
+  color: #FADCDC;    
+}
+
+
+.modal-content2 {
+  background-color: #bc776e; 
+  border: 6px solid #8d5952;   
+  width: 700px;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+
+.modal-content7 {
+  background-color: #bc776e; 
+  border: 6px solid #8d5952;   
+  width: 700px;
+  margin: 5% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+.modal-content22 {
+  background-color: #bc776e; 
+  border: 6px solid #8d5952;   
+  width: 1200px;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;                    
+}
+/*----------------------------------------------------------------------------------------------------------*/
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.MATEJAclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.PETRAclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.DANICAclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.JERCAclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.SONJAclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.MIRANclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.ANTONclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.FRANCclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.SAŠOclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.ALEŠclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.GORANclose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close2 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close2 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close3 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close4 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close5 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close6 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close7 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close8 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close9 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close10 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close11 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close12 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close13 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close14 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close15 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close16 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close17 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close18 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close19 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close20 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close21 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close22 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close23 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close24 {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#He{
+  text-align: center;
+  margin:-10px;
+  display: inline;
+
+}
+#myHeader{
+  display: flex;
+  background-color: #996350;
+  border-radius: 10px;
+  border: #743930 5px solid;
+  
+  
+}
+#slikaheader{
+  width:75px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+#mymainheader{
+  top: 0;
+  display: flex; 
+  text-align: right; 
+  height: 150px; 
+}
+
+body {
+  background-color: #E5BEA0;
+}
+
+nav {
+  background-color: #996350;
+  border: #743930 5px solid;
+  border-radius: 10px;
+  padding-top: 0px;
+  top: 0;
+}
+#openBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+ #MATEJAopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#PETRAopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#DANICAopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#JERCAopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#SONJAopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#MIRANopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#ANTONopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#FRANCopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#SAŠOopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#ALEŠopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#GORANopenBtn {
+  text-align: center;
+  border:  #9f7e6c 6px solid; 
+  border-radius:30px; 
+  background-color:#bf9282 ;
+  margin: 10px;
+}
+
+#openBtn2 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn3 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn4 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn5 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn6 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn7 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn8 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn9 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn10 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn11 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+#openBtn12 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn13 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn14 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn15 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn16 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn17 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn18 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn19 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn20 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn21 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn22 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn23 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#openBtn24 {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+#footer {
+  text-align: center;
+  border:  #8d5952 6px solid; 
+  border-radius:30px; 
+  background-color:#bc776e ;
+  margin: 10px;
+  height: 200px;
+  width:1580px;
+  display: flex;
+  gap: 70px;
+  padding-left:100px;
+  padding-top:40px;
+}
+
