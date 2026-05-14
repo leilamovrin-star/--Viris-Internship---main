@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title name="Top">Cantate Domino</title>
+    <meta charset="UTF-8">
+    <meta name="Avtor" content="Leila Movrin Maršanič">
+    <link rel="stylesheet" href="Projekt.css"></link>
+    <link rel="main" href="pod1.html"></link>
+</head>
+<body>
+
+
+
+
+
+
+<div style="display: flex; position: sticky; top: 0px;">
+
+<!-- NASLOV-->
+<div id="width: 20%;">
+
+ <div class="header" id="myHeader" style="width: 400px; height: 92px; display:flex;">
+
+      <div id="slikaheader"><a href="CDL.png" >
+        <img src="CDL.png" class="img1" alt="Slika" width="75" height="70">
+      </a></div> <div><pre>  </pre></div>
+      <div id="He"><pre></pre><h2 style="color:#FADCDC; font-size: 30px;">Cantate Domino<p style="color:#FADCDC; font-size: 15px;">(Vokalna skupina iz Kočevja)</p></h2></div>
+
+  </div> 
+
+
+</div> 
+
+
+
+
+<!-- NAV BAR-->
+<nav  style="width: 90%;">
+<div style="padding: 30px 150px;   display:flex; font-size: 30px;  height: 30px; ">
+<a href="Projekt.html" style="color:#FADCDC;">HOME</a><pre>  </pre>
+<a href="pod1.html" style="color:#d3af9a;">ZASEDBA</a><pre>  </pre>
+<a href="pod2.html" style="color:#FADCDC;">KRAJI DELOVANJA(1989-2019) </a><pre>  </pre>
+<a href="#footer" style="color:#FADCDC;">DNO</a>
+</div>
+</nav>
+
+
+</div>  
+
+<br>
+
+<!-- ZASEDBA--><br>
+<div><div  style=" margin-top: -10px; height: 45px; color:#FADCDC; font-size: 25px; border: #743930 3px solid; border-radius: 10px; width: 195px; background-color: #996350;"><h2 style=" margin: 2px;" id="ZASEDBA">ZASEDBA:</h2></div><br>
+
+ <label style=" margin-top: 10px; height: 35px; color:#FADCDC; font-size: 25px; border: #743930 3px solid; border-radius: 10px; width: 155px; background-color: #996350;">Ženske:</label><br>
+    <div>
+        <button id="openBtn"><img src="HELENA_ŠTEFANIČ.Sopran.jpg" style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>HELENA ŠTEFANIČ</button>
+        <button id="MATEJAopenBtn"><img src="MATEJA_DEKLEVA.Sopran.jpg" style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>MATEJA DEKLEVA</button>
+        <button id="PETRAopenBtn"><img src="PETRA_STOPAR.Sopran.png"  style="margin: 10px;"class="img1" alt="Slika" width="200px" height="200px" ><br>PETRA STOPAR</button>
+        <button id="DANICAopenBtn"><img src="DANICA_KAVRAKOVA_ŽGANJAR.Alt.jpg"  style="margin: 10px;"class="img1" alt="Slika" width="180px" height="350px"><br>DANICA KAVRAKOVA ŽGANJAR</button>
+        <button id="JERCAopenBtn"><img src="JERCA_MLADENOVIĆ.Alt.jpg"  style="margin: 10px;"class="img1" alt="Slika" width="180px" height="350px"><br>JERCA MLADENOVIĆ</button>
+        <button id="SONJAopenBtn"><img src="SONJA_MOVRIN.Alt.jpg"  style="margin: 10px;"class="img1" alt="Slika" width="180px" height="290px"><br>SONJA MOVRIN</button>
+    </div>
+
+ <label style=" margin-top: 10px; height: 35px; color:#FADCDC; font-size: 25px; border: #743930 3px solid; border-radius: 10px; width: 155px; background-color: #996350;">Moški:</label><br>
+    <div>
+        <button id="MIRANopenBtn"><img src="MIRAN_NOVAK.Tenor.jpg"  style="margin: 10px;" class="img1" alt="Slika"width="180px" height="350px"><br>MIRAN NOVAK</button>
+        <button id="ANTONopenBtn"><img src="ANTON COLNAR.Bas"  style="margin: 10px;"class="img1" alt="Slika" width="180px" height="350px"><br>ANTON COLNAR</button>
+        <button id="FRANCopenBtn"><img src="FRANC_ŠTEFANIČ.Bas"  style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>FRANC ŠTEFANIČ</button>
+        <button id="SAŠOopenBtn"><img src="SAŠO KRIŽ – tenor.jpg" style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>SAŠO KRIŽ</button>
+        <button id="ALEŠopenBtn"><img src="ALEŠ MAROLT – bas.jpg" style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>ALEŠ MAROLT</button>
+        <button id="GORANopenBtn"><img src="GORAN SABOLIČ – bariton.jpg"  style="margin: 10px;" class="img1" alt="Slika" width="180px" height="350px"><br>GORAN SABOLIČ</button>
+    </div>
+
+<script>
+// Počakamo, da se naloži celoten DOM
+document.addEventListener("DOMContentLoaded", function() {
+ //HELENA
+  const modal = document.getElementById("modal");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.querySelector(".close");
+ //MATEJA
+  const MATEJAmodal = document.getElementById("MATEJAmodal");
+  const MATEJAopenBtn = document.getElementById("MATEJAopenBtn");
+  const MATEJAcloseBtn = document.querySelector(".MATEJAclose");
+
+ //PETRA
+  const PETRAmodal = document.getElementById("PETRAmodal");
+  const PETRAopenBtn = document.getElementById("PETRAopenBtn");
+  const PETRAcloseBtn = document.querySelector(".PETRAclose");
+ 
+ //DANICA
+  const DANICAmodal = document.getElementById("DANICAmodal");
+  const DANICAopenBtn = document.getElementById("DANICAopenBtn");
+  const DANICAcloseBtn = document.querySelector(".DANICAclose");
+ //JERCA
+  const JERCAmodal = document.getElementById("JERCAmodal");
+  const JERCAopenBtn = document.getElementById("JERCAopenBtn");
+  const JERCAcloseBtn = document.querySelector(".JERCAclose");
+ //SONJA
+  const SONJAmodal = document.getElementById("SONJAmodal");
+  const SONJAopenBtn = document.getElementById("SONJAopenBtn");
+  const SONJAcloseBtn = document.querySelector(".SONJAclose");
+
+ //MIRAN
+  const MIRANmodal = document.getElementById("MIRANmodal");
+  const MIRANopenBtn = document.getElementById("MIRANopenBtn");
+  const MIRANcloseBtn = document.querySelector(".MIRANclose");
+ //ANTON
+  const ANTONmodal = document.getElementById("ANTONmodal");
+  const ANTONopenBtn = document.getElementById("ANTONopenBtn");
+  const ANTONcloseBtn = document.querySelector(".ANTONclose");
+ //FRANC
+  const FRANCmodal = document.getElementById("FRANCmodal");
+  const FRANCopenBtn = document.getElementById("FRANCopenBtn");
+  const FRANCcloseBtn = document.querySelector(".FRANCclose");
+ //SAŠO
+  const SAŠOmodal = document.getElementById("SAŠOmodal");
+  const SAŠOopenBtn = document.getElementById("SAŠOopenBtn");
+  const SAŠOcloseBtn = document.querySelector(".SAŠOclose");
+
+ //ALEŠ
+  const ALEŠmodal = document.getElementById("ALEŠmodal");
+  const ALEŠopenBtn = document.getElementById("ALEŠopenBtn");
+  const ALEŠcloseBtn = document.querySelector(".ALEŠclose");
+
+ //GORAN
+  const GORANmodal = document.getElementById("GORANmodal");
+  const GORANopenBtn = document.getElementById("GORANopenBtn");
+  const GORANcloseBtn = document.querySelector(".GORANclose");
+
+ ////////////////////////////////////////////////////////////////////////////
+
+  //HELENA
+
+  // Odpri modal ob kliku na gumb
+  openBtn.addEventListener("click", function () {
+    modal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+
+ //MATEJA
+  // Odpri modal ob kliku na gumb
+  MATEJAopenBtn.addEventListener("click", function () {
+    MATEJAmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  MATEJAcloseBtn.addEventListener("click", function () {
+    MATEJAmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === MATEJAmodal) {
+      MATEJAmodal.style.display = "none";
+    }
+  });
+
+
+
+ //PETRA
+   // Odpri modal ob kliku na gumb
+  PETRAopenBtn.addEventListener("click", function () {
+    PETRAmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  PETRAcloseBtn.addEventListener("click", function () {
+    PETRAmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === PETRAmodal) {
+      PETRAmodal.style.display = "none";
+    }
+  });
+ 
+
+ //DANICA
+   // Odpri modal ob kliku na gumb
+  DANICAopenBtn.addEventListener("click", function () {
+    DANICAmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  DANICAcloseBtn.addEventListener("click", function () {
+    DANICAmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === DANICAmodal) {
+      DANICAmodal.style.display = "none";
+    }
+  });
+
+
+ //JERCA
+  // Odpri modal ob kliku na gumb
+  JERCAopenBtn.addEventListener("click", function () {
+    JERCAmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  JERCAcloseBtn.addEventListener("click", function () {
+    JERCAmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === JERCAmodal) {
+      JERCAmodal.style.display = "none";
+    }
+  });
+
+ //SONJA
+   // Odpri modal ob kliku na gumb
+  SONJAopenBtn.addEventListener("click", function () {
+    SONJAmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  SONJAcloseBtn.addEventListener("click", function () {
+    SONJAmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === SONJAmodal) {
+      SONJAmodal.style.display = "none";
+    }
+  });
+
+
+ //MIRAN
+  // Odpri modal ob kliku na gumb
+  MIRANopenBtn.addEventListener("click", function () {
+    MIRANmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  MIRANcloseBtn.addEventListener("click", function () {
+    MIRANmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === MIRANmodal) {
+      MIRANmodal.style.display = "none";
+    }
+  });
+
+ //ANTON
+   // Odpri modal ob kliku na gumb
+  ANTONopenBtn.addEventListener("click", function () {
+    ANTONmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  ANTONcloseBtn.addEventListener("click", function () {
+    ANTONmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === ANTONmodal) {
+      ANTONmodal.style.display = "none";
+    }
+  });
+
+ //FRANC
+   // Odpri modal ob kliku na gumb
+  FRANCopenBtn.addEventListener("click", function () {
+    FRANCmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  FRANCcloseBtn.addEventListener("click", function () {
+    FRANCmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === FRANCmodal) {
+      FRANCmodal.style.display = "none";
+    }
+  });
+
+ //SAŠO
+   // Odpri modal ob kliku na gumb
+  SAŠOopenBtn.addEventListener("click", function () {
+    SAŠOmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  SAŠOcloseBtn.addEventListener("click", function () {
+    SAŠOmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === SAŠOmodal) {
+      SAŠOmodal.style.display = "none";
+    }
+  });
+
+  //ALEŠ
+   // Odpri modal ob kliku na gumb
+  ALEŠopenBtn.addEventListener("click", function () {
+    ALEŠmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  ALEŠcloseBtn.addEventListener("click", function () {
+    ALEŠmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === ALEŠmodal) {
+      ALEŠmodal.style.display = "none";
+    }
+  });
+
+ //GORAN
+   // Odpri modal ob kliku na gumb
+  GORANopenBtn.addEventListener("click", function () {
+    GORANmodal.style.display = "block";
+  });
+
+  // Zapri modal ob kliku na X
+  GORANcloseBtn.addEventListener("click", function () {
+    GORANmodal.style.display = "none";
+  });
+
+  // Zapri modal, če kliknemo izven vsebine
+  window.addEventListener("click", function (event) {
+    if (event.target === GORANmodal) {
+      GORANmodal.style.display = "none";
+    }
+  });
+
+});
+
+ </script>
+
+ <!--Ženke-->
+   <!-- Modal okno-HELENA ŠTEFANIČ -->
+   <div id="modal" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <a href="HELENA_ŠTEFANIČ.Sopran.jpg"><img src="HELENA_ŠTEFANIČ.Sopran.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>HELENA ŠTEFANIČ-Sopran</p>
+     </div>
+    </div>
+    <!-- Modal okno-MATEJA DEKLEVA -->
+   <div id="MATEJAmodal" class="modal">
+     <div class="modal-content">
+       <span class="MATEJAclose">&times;</span>
+       <a href="MATEJA_DEKLEVA.Sopran.jpg"><img src="MATEJA_DEKLEVA.Sopran.jpg" class="img1" alt="Slika"width="180px" height="350px"></a>
+       <p>MATEJA DEKLEVA-Sopran</p>
+     </div>
+    </div>
+    <!-- Modal okno-PETRA STOPAR -->
+   <div id="PETRAmodal" class="modal">
+     <div class="modal-content">
+       <span class="PETRAclose">&times;</span>
+       <a href="PETRA_STOPAR.Sopran.png"><img src="PETRA_STOPAR.Sopran.png" class="img1" alt="Slika" width="200px" height="200px"></a>
+       <p>PETRA STOPAR-Sopran</p>
+     </div>
+    </div>
+    <!-- Modal okno-DANICA KAVRAKOVA ŽGANJAR -->
+   <div id="DANICAmodal" class="modal">
+     <div class="modal-content">
+       <span class="DANICAclose">&times;</span>
+       <a href="DANICA_KAVRAKOVA_ŽGANJAR.Alt.jpg"><img src="DANICA_KAVRAKOVA_ŽGANJAR.Alt.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>DANICA KAVRAKOVA ŽGANJAR-Alt</p>
+     </div>
+    </div>
+    <!-- Modal okno-JERCA MLADENOVIĆ -->
+   <div id="JERCAmodal" class="modal">
+     <div class="modal-content">
+       <span class="JERCAclose">&times;</span>
+       <a href="JERCA_MLADENOVIĆ.Alt.jpg"><img src="JERCA_MLADENOVIĆ.Alt.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>JERCA MLADENOVIĆ-Alt</p>
+     </div>
+    </div>
+    <!-- Modal okno-SONJA MOVRIN -->
+   <div id="SONJAmodal" class="modal">
+     <div class="modal-content">
+       <span class="SONJAclose">&times;</span>
+       <a href="SONJA_MOVRIN.Alt.jpg"><img src="SONJA_MOVRIN.Alt.jpg" class="img1" alt="Slika" width="180px" height="290px"></a>
+       <p>SONJA MOVRIN-Alt</p>
+     </div>
+    </div>
+ <!--Moški-->
+       <!-- Modal okno-MIRAN NOVAK -->
+   <div id="MIRANmodal" class="modal">
+     <div class="modal-content">
+       <span class="MIRANclose">&times;</span>
+       <a href="MIRAN_NOVAK.Tenor.jpg"><img src="MIRAN_NOVAK.Tenor.jpg" class="img1" alt="Slika"width="180px" height="350px"></a>
+       <p>MIRAN NOVAK-Tenor</p>
+     </div>
+    </div>
+    <!-- Modal okno-ANTON COLNAR -->
+   <div id="ANTONmodal" class="modal">
+     <div class="modal-content">
+       <span class="ANTONclose">&times;</span>
+       <a href="ANTON COLNAR.Bas"><img src="ANTON COLNAR.Bas" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>ANTON COLNAR-Bas</p>
+     </div>
+    </div>
+    <!-- Modal okno-FRANC ŠTEFANIČ -->
+   <div id="FRANCmodal" class="modal">
+     <div class="modal-content">
+       <span class="FRANCclose">&times;</span>
+       <a href="FRANC_ŠTEFANIČ.Bas"><img src="FRANC_ŠTEFANIČ.Bas" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>FRANC ŠTEFANIČ-Bas</p>
+     </div>
+    </div>
+    <!-- Modal okno-SAŠO KRIŽ -->
+   <div id="SAŠOmodal" class="modal">
+     <div class="modal-content">
+       <span class="SAŠOclose">&times;</span>
+       <a href="SAŠO KRIŽ – tenor.jpg"><img src="SAŠO KRIŽ – tenor.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>SAŠO KRIŽ-Tenor(Pridruži se nam pri posameznih projektih)</p>
+     </div>
+    </div>
+    <!-- Modal okno-ALEŠ MAROLT-->
+   <div id="ALEŠmodal" class="modal">
+     <div class="modal-content">
+       <span class="ALEŠclose">&times;</span>
+       <a href="ALEŠ MAROLT – bas.jpg"><img src="ALEŠ MAROLT – bas.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>ALEŠ MAROLT-Bas(Pridruži se nam pri posameznih projektih)</p>
+     </div>
+    </div>
+    <!-- Modal okno-GORAN SABOLIČ -->
+   <div id="GORANmodal" class="modal">
+     <div class="modal-content">
+       <span class="GORANclose">&times;</span>
+       <a href="GORAN SABOLIČ – bariton.jpg"><img src="GORAN SABOLIČ – bariton.jpg" class="img1" alt="Slika" width="180px" height="350px"></a>
+       <p>GORAN SABOLIČ-Bariton(Pridruži se nam pri posameznih projektih)</p>
+     </div>
+    </div>
+</div>
+<br> <br>
+
+
+<!-- DNO/FOOTER-->
+<footer>
+<div id="footer">
+    <div class="item-fs">
+    <img width="200" height="150" src="CDL.png" class="img1" alt="Slika">
+    </div>
+
+    <div class="item-f">
+    <h3>Kontakt:</h3>
+    </div>
+
+    <div class="item-f">
+    <h3>Druge povezave:</h3>
+    </div>
+    
+    <div class="item-f">
+    <h5>© 2026 Leila Movrin Maršanič</h5>
+    </div>
+</div>     
+</footer>
+    </body>
+</html>
+
