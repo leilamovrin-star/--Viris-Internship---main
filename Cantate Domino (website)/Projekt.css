@@ -827,3 +827,137 @@ nav {
   padding-top:40px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ── ULTRA AGRESIVEN POPRAVEK ZA INLINE STILE (Zasloni do 768px) ──
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+  /* 1. Prisilno uničenje vseh fiksnih širin na strani */
+  /* Ta ukaz poišče VSAK element, ki ima v HTML-ju določeno širino v pikslih, 
+     jo izbriše in jo zamenja s 100% širino ekrana */
+  html, body, div, section, header, footer, table {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Prisila za Flexbox (Razbije postavitev "vzporedno" v "en pod drugega") */
+  /* Tvoj glavni div, ki ima style="display: flex;", bo moral ubogati tole: */
+  div[style*="display: flex"], 
+  div[style*="display:flex"],
+  #myHeader, 
+  #mymainheader {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+  /* 3. Odstranitev zamikov (margin-left: 100px ipd.), ki stran potiskajo v desno */
+  div[style*="margin-left"], 
+  div[style*="margin-top"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 15px !important;
+  }
+
+  /* 4. Popravek za vse gumbe (openBtn) */
+  [id*="openBtn"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 65px !important;
+    padding: 15px !important;
+    margin: 10px 0 !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. Popravek za vsa modalna okna pevcev */
+  [class*="modal-content"] {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 20% auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. Popravek za fiksni footer */
+  #footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    gap: 15px !important;
+  }
+}
