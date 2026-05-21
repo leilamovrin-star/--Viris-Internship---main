@@ -891,73 +891,213 @@ nav {
 
 
 
+/* ...existing code... */
 
-
-/* ==========================================================================
-   ── ULTRA AGRESIVEN POPRAVEK ZA INLINE STILE (Zasloni do 768px) ──
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-
-  /* 1. Prisilno uničenje vseh fiksnih širin na strani */
-  /* Ta ukaz poišče VSAK element, ki ima v HTML-ju določeno širino v pikslih, 
-     jo izbriše in jo zamenja s 100% širino ekrana */
-  html, body, div, section, header, footer, table {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    height: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    float: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2. Prisila za Flexbox (Razbije postavitev "vzporedno" v "en pod drugega") */
-  /* Tvoj glavni div, ki ima style="display: flex;", bo moral ubogati tole: */
-  div[style*="display: flex"], 
-  div[style*="display:flex"],
-  #myHeader, 
-  #mymainheader {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 10px !important;
-  }
-
-  /* 3. Odstranitev zamikov (margin-left: 100px ipd.), ki stran potiskajo v desno */
-  div[style*="margin-left"], 
-  div[style*="margin-top"] {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 15px !important;
-  }
-
-  /* 4. Popravek za vse gumbe (openBtn) */
-  [id*="openBtn"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: 65px !important;
-    padding: 15px !important;
-    margin: 10px 0 !important;
-    display: block !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 5. Popravek za vsa modalna okna pevcev */
-  [class*="modal-content"] {
-    width: 90% !important;
-    max-width: 90% !important;
-    margin: 20% auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 6. Popravek za fiksni footer */
-  #footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 20px !important;
-    gap: 15px !important;
-  }
+/* Variables for easy theme tweaks */
+:root{
+  --bg-page: #E5BEA0;
+  --modal-bg-1: #c9a497;
+  --modal-bg-2: #bc776e;
+  --modal-border-1: #9f7e6c;
+  --modal-border-2: #8d5952;
+  --button-bg-1: #bf9282;
+  --button-bg-2: #bc776e;
+  --button-border-1: 6px solid var(--modal-border-1);
+  --button-border-2: 6px solid var(--modal-border-2);
+  --footer-bg: #bc776e;
 }
+
+/* Page */
+body {
+  background-color: var(--bg-page);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Modal overlay */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Generic modal content for any class that starts/ends with "modal-content" */
+[class$="modal-content"], [class^="modal-content"] {
+  background-color: var(--modal-bg-1);
+  border: 6px solid var(--modal-border-1);
+  width: min(90%, 400px);
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Specific size overrides (preserve existing special classes) */
+.modal-content2,
+.modal-content7 {
+  background-color: var(--modal-bg-2);
+  border: 6px solid var(--modal-border-2);
+  width: min(95%, 700px);
+  max-width: 700px;
+}
+
+.modal-content22 {
+  background-color: var(--modal-bg-2);
+  border: 6px solid var(--modal-border-2);
+  width: min(98%, 1200px);
+  max-width: 1200px;
+}
+
+/* If there are person-specific modal classes like MATEJAmodal-content etc,
+   they already match [class$="modal-content"] above so styling is unified.
+   Additional per-person tweaks can be added if needed, e.g. color changes:
+   .GORANmodal-content { color: #FADCDC; } */
+
+/* Generic "close" button selector: matches any class ending with "close" */
+[class$="close"] {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Header and nav improvements */
+#He {
+  text-align: center;
+  margin: 0;
+  display: inline-block;
+}
+
+#myHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #996350;
+  border-radius: 10px;
+  border: #743930 5px solid;
+  padding: 0.4rem;
+}
+
+#slikaheader {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+  padding: 8px;
+  object-fit: cover;
+}
+
+#mymainheader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 150px;
+}
+
+/* Navigation */
+nav {
+  background-color: #996350;
+  border: #743930 5px solid;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Open buttons: match ids that end with "openBtn" (MATEJAopenBtn etc) and those that start with "openBtn" (openBtn2, openBtn3...) */
+[id$="openBtn"], [id^="openBtn"] {
+  text-align: center;
+  border-radius: 30px;
+  background-color: var(--button-bg-1);
+  margin: 10px;
+  padding: 0.6rem 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--button-border-1);
+}
+
+/* Larger open buttons (the numbered gallery tiles) */
+[id^="openBtn"][id*="openBtn"] {
+  background-color: var(--button-bg-2);
+  border: var(--button-border-2);
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+}
+
+/* Footer responsive */
+#footer {
+  text-align: center;
+  border: var(--button-border-2);
+  border-radius: 30px;
+  background-color: var(--footer-bg);
+  margin: 10px;
+  padding: 40px 20px;
+  width: calc(100% - 40px);
+  max-width: 1580px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Responsive helpers (kept and simplified) */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  section { padding: 3rem 1.5rem; }
+  #footer { padding: 20px 12px; }
+}
+
+@media (max-width: 640px) {
+  body { overflow-x: hidden; width: 100%; }
+  .nav-desktop { display: none !important; }
+  .nav-toggle { display: flex !important; background-color: transparent; z-index: 999999; }
+  #hero { padding: 2.5rem 1.5rem 4rem !important; width: 100% !important; box-sizing: border-box !important; }
+  .hero-logo { width: min(320px, 88vw) !important; }
+  .expect-cards { grid-template-columns: 1fr !important; gap: 2rem !important; width: 100% !important; }
+  .participate-grid { display: flex !important; flex-direction: column !important; }
+}
+
+/* Ticket modal kept as-is but using variables where useful */
+#ticket-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000000000;
+  background: rgba(10, 12, 15, 0.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#ticket-modal.open { display: flex; }
+
+#ticket-modal-box {
+  background: var(--bg-page);
+  border: 1px solid var(--modal-border-2);
+  padding: 3rem 2.5rem 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  box-sizing: border-box;
+}
+
+/* ...existing code... */
