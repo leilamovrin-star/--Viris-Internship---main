@@ -488,6 +488,15 @@ nav {
   padding-top: 0px;
   top: 0;
 }
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
 #openBtn {
   text-align: center;
   border:  #9f7e6c 6px solid; 
