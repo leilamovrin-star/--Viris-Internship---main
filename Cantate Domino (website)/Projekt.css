@@ -820,284 +820,182 @@ nav {
   background-color:#bc776e ;
   margin: 10px;
   height: 200px;
-  width:1580px;
+  width:auto;
   display: flex;
   gap: 70px;
   padding-left:100px;
   padding-top:40px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ...existing code... */
-
-/* Variables for easy theme tweaks */
-:root{
-  --bg-page: #E5BEA0;
-  --modal-bg-1: #c9a497;
-  --modal-bg-2: #bc776e;
-  --modal-border-1: #9f7e6c;
-  --modal-border-2: #8d5952;
-  --button-bg-1: #bf9282;
-  --button-bg-2: #bc776e;
-  --button-border-1: 6px solid var(--modal-border-1);
-  --button-border-2: 6px solid var(--modal-border-2);
-  --footer-bg: #bc776e;
+/* ===== MOBILE RESPONSIVE (768px and below) ===== */
+@media (max-width: 768px) {
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Override all flex containers */
+  body > div {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  div[style*="display: flex"] {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin: 0 !important;
+    align-items: center !important;
+  }
+  
+  /* Header section */
+  div[style*="position: sticky"] {
+    position: relative !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+  
+  #myHeader {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+  
+  #He, #He h2, #He p {
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+  }
+  
+  #He p {
+    font-size: 14px !important;
+  }
+  
+  #slikaheader {
+    width: 100px !important;
+    height: 95px !important;
+  }
+  
+  /* Navigation */
+  nav {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 10px !important;
+    order: 2 !important;
+  }
+  
+  nav div {
+    padding: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 16px !important;
+    height: auto !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  
+  nav a {
+    padding: 10px !important;
+    font-size: 18px !important;
+    display: block !important;
+  }
+  
+  /* Main content area */
+  div[style*="width:800px"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+  
+  div[style*="width:800px"] img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Form container */
+  div[style*="width:310px"] {
+    width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+  
+  div[style*="width:310px"] input {
+    width: 100% !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+  
+  div[style*="width:310px"] label {
+    font-size: 16px !important;
+  }
+  
+  /* Description text */
+  div[style*="width: 700px"] {
+    width: 100% !important;
+    margin: 20px 0 !important;
+    padding: 15px !important;
+  }
+  
+  /* Footer */
+  #footer {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 20px 10px !important;
+    margin: 10px 0 !important;
+  }
+  
+  #footer img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 200px !important;
+  }
+  
+  /* Buttons */
+  button, input[type="submit"] {
+    font-size: 18px !important;
+    padding: 15px !important;
+    width: 100% !important;
+  }
+  
+  body {
+    padding: 0 !important;
+    width: 100%;
+  }
 }
 
-/* Page */
-body {
-  background-color: var(--bg-page);
-  margin: 0;
-  box-sizing: border-box;
+/* ===== SMALL PHONES (480px and below) ===== */
+@media (max-width: 480px) {
+  
+  #He, #He h2 {
+    font-size: 18px !important;
+  }
+  
+  #He p {
+    font-size: 12px !important;
+  }
+  
+  nav div {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+  
+  nav a {
+    font-size: 16px !important;
+  }
+  
+  div[style*="width:310px"] input,
+  div[style*="width:310px"] label {
+    font-size: 14px !important;
+  }
+  
+  div[style*="width: 700px"] {
+    font-size: 14px !important;
+  }
 }
 
-/* Modal overlay */
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-/* Generic modal content for any class that starts/ends with "modal-content" */
-[class$="modal-content"], [class^="modal-content"] {
-  background-color: var(--modal-bg-1);
-  border: 6px solid var(--modal-border-1);
-  width: min(90%, 400px);
-  max-width: 420px;
-  margin: auto;
-  padding: 20px;
-  position: relative;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-/* Specific size overrides (preserve existing special classes) */
-.modal-content2,
-.modal-content7 {
-  background-color: var(--modal-bg-2);
-  border: 6px solid var(--modal-border-2);
-  width: min(95%, 700px);
-  max-width: 700px;
-}
-
-.modal-content22 {
-  background-color: var(--modal-bg-2);
-  border: 6px solid var(--modal-border-2);
-  width: min(98%, 1200px);
-  max-width: 1200px;
-}
-
-/* If there are person-specific modal classes like MATEJAmodal-content etc,
-   they already match [class$="modal-content"] above so styling is unified.
-   Additional per-person tweaks can be added if needed, e.g. color changes:
-   .GORANmodal-content { color: #FADCDC; } */
-
-/* Generic "close" button selector: matches any class ending with "close" */
-[class$="close"] {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 22px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-/* Header and nav improvements */
-#He {
-  text-align: center;
-  margin: 0;
-  display: inline-block;
-}
-
-#myHeader {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  background-color: #996350;
-  border-radius: 10px;
-  border: #743930 5px solid;
-  padding: 0.4rem;
-}
-
-#slikaheader {
-  width: 75px;
-  height: auto;
-  border-radius: 10px;
-  padding: 8px;
-  object-fit: cover;
-}
-
-#mymainheader {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  height: 150px;
-}
-
-/* Navigation */
-nav {
-  background-color: #996350;
-  border: #743930 5px solid;
-  border-radius: 10px;
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
-/* Open buttons: match ids that end with "openBtn" (MATEJAopenBtn etc) and those that start with "openBtn" (openBtn2, openBtn3...) */
-[id$="openBtn"], [id^="openBtn"] {
-  text-align: center;
-  border-radius: 30px;
-  background-color: var(--button-bg-1);
-  margin: 10px;
-  padding: 0.6rem 1rem;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--button-border-1);
-}
-
-/* Larger open buttons (the numbered gallery tiles) */
-[id^="openBtn"][id*="openBtn"] {
-  background-color: var(--button-bg-2);
-  border: var(--button-border-2);
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-}
-
-/* Footer responsive */
-#footer {
-  text-align: center;
-  border: var(--button-border-2);
-  border-radius: 30px;
-  background-color: var(--footer-bg);
-  margin: 10px;
-  padding: 40px 20px;
-  width: calc(100% - 40px);
-  max-width: 1580px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-/* Responsive helpers (kept and simplified) */
-@media (max-width: 900px) {
-  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  section { padding: 3rem 1.5rem; }
-  #footer { padding: 20px 12px; }
-}
-
-@media (max-width: 640px) {
-  body { overflow-x: hidden; width: 100%; }
-  .nav-desktop { display: none !important; }
-  .nav-toggle { display: flex !important; background-color: transparent; z-index: 999999; }
-  #hero { padding: 2.5rem 1.5rem 4rem !important; width: 100% !important; box-sizing: border-box !important; }
-  .hero-logo { width: min(320px, 88vw) !important; }
-  .expect-cards { grid-template-columns: 1fr !important; gap: 2rem !important; width: 100% !important; }
-  .participate-grid { display: flex !important; flex-direction: column !important; }
-}
-
-/* Ticket modal kept as-is but using variables where useful */
-#ticket-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000000000;
-  background: rgba(10, 12, 15, 0.85);
-  backdrop-filter: blur(8px);
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-#ticket-modal.open { display: flex; }
-
-#ticket-modal-box {
-  background: var(--bg-page);
-  border: 1px solid var(--modal-border-2);
-  padding: 3rem 2.5rem 2.5rem;
-  max-width: 400px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0;
-  box-sizing: border-box;
-}
-
-/* ...existing code... */
